@@ -1,0 +1,69 @@
+.listPermission {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  min-height: 80vh;
+
+  &__empty {
+    margin: 10px;
+  }
+
+  &__title {
+    display: inline-block;
+    padding: 8px 14px;
+    background-color: #3d99dc;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+  }
+
+  &__item {
+    // margin-top: 5px;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    // width: 800px;
+    justify-content: space-between;
+
+    &-name {
+      & span {
+        font-weight: bold;
+      }
+    }
+
+    &-action {
+      display: flex;
+      align-items: center;
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      padding: 5px 8px;
+      margin-left: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+
+      & p {
+        margin-left: 5px;
+      }
+
+      & svg {
+        font-size: 20px;
+      }
+
+      &--yes {
+        color: #fff;
+        background-color: #68bb59;
+      }
+
+      &--no {
+        color: #fff;
+        background-color: rgb(255, 65, 78);
+      }
+    }
+  }
+}

@@ -1,0 +1,308 @@
+.search {
+  &__container {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+  }
+
+  &__new {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #3d99dc;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    top: -10px;
+    right: -14px;
+    display: flex;
+    align-items: self-end;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    color: #fff;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid #3d99dc;
+    }
+  }
+
+  &__item {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &-img {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 200px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      margin-bottom: 3px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    &-name {
+      margin-top: 5px;
+      font-weight: 500;
+      font-size: 16px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      line-height: 1.2;
+      overflow: hidden;
+      margin-bottom: 5px;
+    }
+
+    &-buy {
+      font-size: 14px;
+      margin-top: 5px;
+
+      & span {
+        font-weight: 500;
+      }
+    }
+
+    &-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & svg {
+        color: rgb(255, 67, 78);
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+
+    &-time {
+      display: inline-block;
+      padding: 5px;
+
+      font-size: 12px;
+      color: #3d99dc;
+      border: 1px solid #3d99dc;
+    }
+
+    &-button {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+
+      & button {
+        padding: 5px 12px;
+        //   margin: 5px;
+        margin-top: 10px;
+        color: #fff;
+        background-color: #3d99dc;
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+        border-radius: 3px;
+        // transform: translateY(70%);
+      }
+    }
+
+    &-expire {
+      margin-top: 5px;
+      font-size: 12px;
+      text-align: center;
+
+      &-end {
+        display: block;
+        color: rgb(255, 67, 78);
+        border: 1px solid rgb(255, 67, 78);
+        padding: 5px;
+      }
+
+      &-still {
+        display: block;
+        color: #3d99dc;
+        border: 1px solid #3d99dc;
+        padding: 5px;
+      }
+    }
+
+    &-price {
+      margin-top: 8px;
+      font-size: 14px;
+
+      & span {
+        font-weight: 500;
+      }
+    }
+
+    &-offerTime {
+      font-size: 12px;
+      margin-top: 5px;
+
+      & span {
+        font-weight: 500;
+      }
+    }
+
+    &-biggestBidder {
+      margin-top: 8px;
+      font-size: 12px;
+
+      & span {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+.pagination-button {
+  border: none;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  transition: background-color 400ms ease, color 400ms ease;
+  background-color: rgba(0, 69, 172, 1);
+  color: #222222;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 0 15px;
+  color: white;
+  font-weight: bold;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.pagination-input {
+  width: 25px;
+  font-size: 16px;
+  padding: 0px;
+  text-align: center;
+}
+
+.pagination-span {
+  padding: 10px 0px;
+  margin-left: 5px;
+}
+
+.pagination-p {
+  padding: 10px 0px;
+  margin-left: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #222222;
+}
+
+/* Dropdown */
+
+.dropdown123 {
+  display: inline-block;
+  position: relative;
+  // margin: 20px 0px 30px 20px !important;
+  margin-top: 20px;
+  z-index: 2;
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 10px 30px 10px 20px;
+  background-color: #5f51ff !important;
+  color: white !important;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid white;
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+}
+
+.dd-input:checked + .dd-menu {
+  display: block;
+}
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #afa8ff;
+  color: white !important;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+.dd-menu li.divider {
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+}

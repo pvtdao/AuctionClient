@@ -1,0 +1,52 @@
+.menu-signin {
+  position: relative;
+
+  &:hover &__menu {
+    display: flex;
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 8px;
+    color: #fff;
+
+    & p {
+      font-size: 12px;
+      margin-top: 10px;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      width: 150px;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    width: 100%;
+    transition: all 0.3s linear;
+    display: none;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+
+    &-item {
+      cursor: pointer;
+      border: 1 px solid;
+      width: 100%;
+      text-align: center;
+      padding: 8px;
+
+      &:hover {
+        background-color: #3d99cd;
+        color: #fff;
+      }
+    }
+  }
+}

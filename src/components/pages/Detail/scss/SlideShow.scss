@@ -1,0 +1,49 @@
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.detail-slideShow {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+
+  &__btn {
+    font-size: 30px;
+    display: block;
+    margin-left: auto;
+    padding: 8px 12px;
+    color: rgb(255, 67, 78);
+    // border: 1px solid rgb(255, 67, 78);
+  }
+
+  &__container {
+    height: 100%;
+  }
+
+  &__img {
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 5px;
+  }
+}
+
+.rec-carousel-wrapper {
+  height: 100%;
+}
+
+.rec-carousel {
+  height: 100%;
+}

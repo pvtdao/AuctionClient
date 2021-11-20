@@ -1,0 +1,40 @@
+.seller {
+  &__header {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & + hr {
+      margin-top: 5px;
+    }
+  }
+
+  &__action {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  &__btn {
+    margin-left: 8px;
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+
+    &-post,
+    &-manage {
+      background-color: #3c99dc;
+      color: #fff;
+    }
+
+    &-back {
+      color: #fa0046;
+      border: 1px solid #fa0046;
+      background-color: #fff;
+    }
+  }
+}

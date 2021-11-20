@@ -1,0 +1,23 @@
+.admin-add-category-btn {
+  color: #000;
+  //   border: 1px solid #fff;
+  background: #fff;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.admin-form-add-btn {
+  margin-bottom: auto;
+  border: 1px solid #3d99dc;
+  color: #3d99dc;
+  background: unset;
+  outline: none;
+  cursor: pointer;
+}
+
+.admin__tr___sub {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,71 @@
+.currentPrice {
+  font-weight: 200;
+  color: #fff;
+  border-radius: 3px;
+  padding: 12px 25px;
+
+  background: #3c99dc;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 8px;
+
+  &__text,
+  &__textEnd {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  &__textEnd {
+    text-align: right;
+  }
+
+  &__price {
+    color: #000;
+    font-size: 24px;
+    font-weight: 500;
+    background: #fff;
+    // background: rgb(36, 36, 36);
+    padding: 12px 18px;
+    border-radius: 5px;
+  }
+
+  &__timeEnd {
+    color: #000;
+    background: #3c99dc;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  &__timeleft {
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 3px;
+    font-weight: 500;
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      color: #000;
+    }
+  }
+
+  &__daysleft,
+  &__hoursleft,
+  &__minsleft {
+    padding: 4px 5px;
+    background: #fff;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-weight: 400;
+  }
+
+  &__ended {
+    border: 1px solid red;
+    color: #fff;
+    background-color: rgba(255, 65, 65, 1);
+    padding: 5px 12px;
+    margin-top: 5px;
+  }
+}

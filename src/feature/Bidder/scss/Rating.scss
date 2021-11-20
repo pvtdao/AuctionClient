@@ -1,0 +1,50 @@
+.rating {
+  &__general {
+    display: flex;
+    align-items: center;
+
+    & h3 {
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    &-like,
+    &-dislike {
+      color: #3c99dc;
+      font-size: 16px;
+    }
+  }
+
+  &__detail {
+    margin-top: 20px;
+
+    & h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+  }
+
+  &__item {
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  &__name {
+    margin-bottom: 8px;
+
+    & svg {
+      color: #3c99dc;
+    }
+  }
+
+  &__comment {
+    line-height: 1.1;
+  }
+}

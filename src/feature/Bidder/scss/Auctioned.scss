@@ -1,0 +1,94 @@
+.auctioned {
+  &__item {
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+  }
+
+  &__new {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #3d99dc;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    top: -10px;
+    left: -14px;
+    display: flex;
+    align-items: self-end;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    color: #fff;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid #3d99dc;
+    }
+  }
+
+  &__image {
+    margin-right: 5px;
+    min-width: 170px;
+    height: 170px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  &__info {
+    padding: 10px 20px 5px 20px;
+    max-height: 170px;
+    // display: flex;
+    // flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    width: 100%;
+  }
+
+  &__name {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.2;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  &__seller,
+  &__timeStart {
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding: 5px 12px;
+    border: 1px solid #3c99dc;
+    color: #3c99dc;
+    margin-right: 10px;
+  }
+
+  &__price {
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 8px;
+  }
+
+  &__detail {
+    padding: 8px 14px;
+    color: #3c99dc;
+    border: 1px solid #3c99dc;
+    margin-left: auto;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+}
