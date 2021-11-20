@@ -7,6 +7,7 @@ import axios from 'axios'
 import { setLoading } from '../../../../redux/actions/loadingAction'
 import { imagePlaceholder } from '../../../../util/imagePlaceholder'
 import Empty from '../../../../components/Empty/Empty'
+import { useHistory } from 'react-router';
 
 Winning.propTypes = {
   url: PropTypes.string,
@@ -194,11 +195,18 @@ function WinningItem({ url, name, seller, sellerId, prodId }) {
     }
   }
 
+  const history = useHistory()
+
+  function handleDirectDetail() {
+    history.push(`/detail/${prodId}`)
+  }
+
   return (
     <div className='winning__item ended-item'>
       <div
+        onClick={handleDirectDetail}
         className='winning__item-img'
-        style={{ backgroundImage: `url('${url}')` }}
+        style={{ backgroundImage: `url('${url}')`, cursor: 'pointer' }}
       />
       <p className='winning__item-name' title={name}>
         {name}
