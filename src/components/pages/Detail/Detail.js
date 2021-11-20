@@ -141,16 +141,27 @@ export default function Detail() {
   const currenPrice = prodBeginPrice + prodOfferNumber * prodStepPrice;
 
   useEffect(() => {
-    console.log('vô đây');
-    fetchProductDetail();
-    getListAuction();
+    async function run() {
+      setLoading(true);
+      setListAuction([]);
+      console.log('vô đây');
+      await fetchProductDetail();
+      getListAuction();
+
+      setLoading(false);
+    }
+
+    run();
   }, [prodId]);
 
+  console.log('list auction:', listAuction);
   for (let i = 0; i < listAuction.length; i++) {
     if (biggestPrice < listAuction[i].sttBiggestPrice) {
       setBiggestPrice(listAuction[i].sttBiggestPrice);
     }
   }
+
+  // console.log('big price 2: ', biggestPrice);
 
   const { days, hours, mins } = getTimeLeft(expireDate);
 
@@ -216,6 +227,7 @@ export default function Detail() {
             if (goToList) {
               history.push('/bidder/profile/auctioned');
             } else {
+              fetchProductDetail();
             }
           });
         } catch (error) {
@@ -490,6 +502,7 @@ export default function Detail() {
                     prodId={prodId}
                     biggestPrice={biggestPrice}
                     setLoading={setLoading}
+                    fetchProductDetail={fetchProductDetail}
                   />
                 </div>
               </div>
@@ -564,6 +577,7 @@ function Offer({
   mins,
   hours,
   setLoading,
+  fetchProductDetail,
 }) {
   let accessToken = '';
   let role = '';
@@ -686,11 +700,14 @@ function Offer({
             if (goToList) {
               history.push('/bidder/profile/auctioned');
             } else {
+              fetchProductDetail();
             }
           });
         } catch (error) {
           console.log(error.response);
           setLoading(false);
+
+          // if(error.response.data.errorM)
 
           if (error.response.data.errorMessage.includes('First Time')) {
             return swal(
@@ -867,7 +884,8 @@ function RelateItem({ src, seller, price, name, isEnd, prodId }) {
   const history = useHistory();
 
   function onClickRelate() {
-    history.push(`/detail/${prodId}`);
+    // window.location.reload();
+    history.replace(`/detail/${prodId}`);
     window.scrollTo(0, 0);
   }
 
